@@ -51,5 +51,5 @@ Basically, from step=1, there are 2 was to get to step=3, from step=2, there is 
 BUT, the valid paths of steps=1 and steps=2 are invalid in respect for steps=3 because they haven't reached steps=3.
 And thus the ways it took to get to step=1 is 1 and steps=2 is 2. 
 
-And so we subtract 1 + 2 from the recurrence relation.
+And so we subtract 1 + 2 from the recurrence relation. This gets amplified as we go up.
 '''

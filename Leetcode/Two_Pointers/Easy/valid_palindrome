@@ -1,0 +1,32 @@
+class Solution(object):
+    '''
+    - Remove all unwanted (convert uppercase to lowercase)
+    - remove all alphanumeric values
+        (Do this with checking the hex values)
+    
+    - Then check from ends, work from outside to the middle
+    '''
+    def isPalindrome(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        s = s.lower()
+        temp = []
+        for i in range(len(s)):
+            if ((ord(s[i])>= 48 and ord(s[i]) <= 57 ) or (ord(s[i])>= 97 and ord(s[i]) <= 122 )):
+                temp.append(s[i])
+            else:
+                continue
+        front = 0
+        end = len(temp)-1
+        
+        while (front < end):
+            if (temp[front] != temp[end]):
+                return False
+            else:
+                front += 1
+                end -= 1
+        return True
+
+        
