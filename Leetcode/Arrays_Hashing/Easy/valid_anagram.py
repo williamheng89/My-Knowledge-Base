@@ -20,8 +20,8 @@ class Solution(object):
         s_list = [0]*26
         t_list = [0]*26
         for i in range(len(s)):
-            s_list[ord(s[i])-97] += 1
-            t_list[ord(t[i])-97] += 1
+            s_list[ord(s[i])-ord('a')] += 1
+            t_list[ord(t[i])-ord('a')] += 1
         for i in range(len(s_list)):
             if (s_list[i] != t_list[i]):
                 return False
